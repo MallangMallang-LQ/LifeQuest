@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 744be8baa6c2ae446ab545657503e00e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 170908
+  packageName: AutoMover Free
+  packageVersion: 1.1.1
+  assetPath: Assets/Plugins/AutoMover/Demo/Materials/Tree_Textures/Tree.prefab
+  uploadId: 656202

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0c424a946ca7a074b855af4a69d32a6a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 170908
+  packageName: AutoMover Free
+  packageVersion: 1.1.1
+  assetPath: Assets/Plugins/AutoMover/Editor/MoverEditor.cs
+  uploadId: 656202

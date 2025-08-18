@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: a35d597f683e6ea468b8e26bfff097e2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 170908
+  packageName: AutoMover Free
+  packageVersion: 1.1.1
+  assetPath: Assets/Plugins/AutoMover/Demo/Scroller.cs
+  uploadId: 656202
