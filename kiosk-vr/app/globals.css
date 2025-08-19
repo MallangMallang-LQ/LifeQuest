@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 자동 다크 반전 방지 - UA에게 라이트만 쓴다고 알림 */
+:root { color-scheme: light; }
+/* 어떤 다크 환경에서도 라이트 유지 */
+@media (prefers-color-scheme: dark) {
+  :root { color-scheme: light; }
+}
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
