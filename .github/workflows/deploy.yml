@@ -18,6 +18,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Debug: list files
+        shell: bash
+        run: |
+          pwd
+          ls -la
+          ls -la kiosk-vr/app/checkout
+          ls -la kiosk-vr/app/pay/processing
+          ls -la kiosk-vr/app/pay/success
+          ls -la kiosk-vr/app/pay/fail
+          
       - name: Checkout
         uses: actions/checkout@v4
 
