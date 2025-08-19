@@ -38,9 +38,7 @@ jobs:
       - name: Install deps (ci)
         if: ${{ hashFiles(format('{0}/package-lock.json', env.WORKDIR)) != '' }}
         run: npm ci
-      - name: Install deps (no lockfile)
-        if: ${{ hashFiles(format('{0}/package-lock.json', env.WORKDIR)) == '' }}
-        run: npm install
+
 
       - name: Build & Export
         run: |
