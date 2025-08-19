@@ -17,7 +17,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
+    steps:          
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -33,12 +33,19 @@ jobs:
         working-directory: kiosk-vr
         run: npm install --no-audit --no-fund
 
-      - name: Build & Export (static)
+
+      - name: Build 
         working-directory: kiosk-vr
         env:
           GITHUB_PAGES: true           # next.config에서 basePath 분기용
-        run: |
+        run:
           npm run build
+
+      - name: Export
+        working-directory: kiosk-vr
+        env: 
+          GITHUB_PAGES: true
+        run:
           npm run export
 
       - name: Upload artifact
