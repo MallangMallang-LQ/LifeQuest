@@ -3,14 +3,18 @@
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 
-const label = (m?: string) => ({
+const METHODS = ['kakaopay','tosspay','naverpay','card','samsungpay','applepay'] as const;
+type Method = typeof METHODS[number];
+const LABELS: Record<Method, string> = {
   kakaopay: '카카오페이',
   tosspay: '토스페이',
   naverpay: '네이버페이',
   card: '신용/체크카드',
   samsungpay: '삼성페이',
   applepay: '애플페이',
-}[m as any] ?? '결제');
+};
+function isMethod(x: string): x is Method { return (METHODS as readonly string[]).includes(x); }
+function label(m?: string) { return m && isMethod(m) ? LABELS[m] : '결제'; }
 
 export default function SuccessClient() {
   const p = useSearchParams();

@@ -3,19 +3,18 @@
 import { useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 
-const paymentMethods = {
+const METHODS = ['kakaopay','tosspay','naverpay','card','samsungpay','applepay'] as const;
+type Method = typeof METHODS[number];
+const LABELS: Record<Method, string> = {
   kakaopay: '카카오페이',
   tosspay: '토스페이',
   naverpay: '네이버페이',
   card: '신용/체크카드',
   samsungpay: '삼성페이',
   applepay: '애플페이',
-} as const;
-
-type PaymentMethod = keyof typeof paymentMethods;
-
-const methodLabel = (m?: string) =>
-  paymentMethods[m as PaymentMethod] ?? '결제';
+};
+function isMethod(x: string): x is Method { return (METHODS as readonly string[]).includes(x); }
+function methodLabel(m?: string) { return m && isMethod(m) ? LABELS[m] : '결제'; }
 
 export default function ProcessingClient() {
   const sp = useSearchParams();

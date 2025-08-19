@@ -8,28 +8,20 @@ export default function Home() {
           <h1 className="text-4xl sm:text-5xl font-black tracking-tight">주문 방식 선택</h1>
           <p className="mt-3 text-neutral-600">매장 / 포장을 먼저 선택하세요</p>
 
-          {/* VR 친화 큰 버튼 */}
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Link
               href="/kiosk/?service=dinein"
-              className="h-36 sm:h-44 rounded-2xl bg-neutral-900 text-white
-                         flex items-center justify-center gap-3 shadow-lg
-                         hover:shadow-xl active:scale-[.98] transition text-2xl sm:text-3xl font-extrabold"
+              className="h-36 sm:h-44 rounded-2xl bg-neutral-900 text-white flex items-center justify-center gap-3 shadow-lg hover:shadow-xl active:scale-[.98] transition text-2xl sm:text-3xl font-extrabold"
               aria-label="매장 이용하기"
             >
-              <span className="text-4xl">🍽️</span>
-              <span>매장</span>
+              <span className="text-4xl">🍽️</span><span>매장</span>
             </Link>
-
             <Link
               href="/kiosk/?service=takeout"
-              className="h-36 sm:h-44 rounded-2xl bg-teal-700 text-white
-                         flex items-center justify-center gap-3 shadow-lg
-                         hover:shadow-xl active:scale-[.98] transition text-2xl sm:text-3xl font-extrabold"
+              className="h-36 sm:h-44 rounded-2xl bg-teal-700 text-white flex items-center justify-center gap-3 shadow-lg hover:shadow-xl active:scale-[.98] transition text-2xl sm:text-3xl font-extrabold"
               aria-label="포장하기"
             >
-              <span className="text-4xl">🥡</span>
-              <span>포장</span>
+              <span className="text-4xl">🥡</span><span>포장</span>
             </Link>
           </div>
 

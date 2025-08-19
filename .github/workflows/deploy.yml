@@ -33,7 +33,6 @@ jobs:
         working-directory: kiosk-vr
         run: npm install --no-audit --no-fund
 
-
       - name: Build & Export (static)
         working-directory: kiosk-vr
         env:
