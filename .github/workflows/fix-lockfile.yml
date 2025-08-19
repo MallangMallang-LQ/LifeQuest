@@ -1,27 +1,18 @@
 name: Fix lockfile (generate package-lock.json)
-
-on:
-  workflow_dispatch:
-
-permissions:
-  contents: write   # ← 커밋 권한 필요
-
+on: { workflow_dispatch: {} }
+permissions: { contents: write }
 jobs:
   fix:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
+        with: { node-version: 20 }
       - name: Generate lockfile
         working-directory: kiosk-vr
         run: |
           rm -f package-lock.json
-          npm install
-
+          npm install --package-lock-only
       - name: Commit lockfile
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
