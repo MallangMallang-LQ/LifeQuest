@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  WORKDIR: ./vr-kiosk-web   # Next.js 프로젝트 폴더. 루트면 "." 로 바꿔
+  WORKDIR: ./kiosk-vr   
   GITHUB_PAGES: 'true'      # basePath 분기용
 
 permissions:
@@ -27,7 +27,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with: { lfs: true }            # LFS 자산 쓰면 on
 
       - uses: actions/setup-node@v4
         with:
