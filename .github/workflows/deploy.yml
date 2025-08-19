@@ -33,7 +33,7 @@ jobs:
         working-directory: kiosk-vr
         run: |
           if [ -f package-lock.json ]; then
-            npm clean-install
+            npm ci
           else
             npm install
           fi
