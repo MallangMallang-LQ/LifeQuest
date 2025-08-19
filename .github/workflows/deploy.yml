@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  WORKDIR: ./kiosk-vr   
+  WORKDIR: /kiosk-vr   
   GITHUB_PAGES: 'true'      # basePath 분기용
 
 permissions:
