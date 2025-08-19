@@ -1,6 +1,6 @@
 // next.config.mjs
 const isGhPages = process.env.GITHUB_PAGES === 'true';
-const repo = 'LifeQuest/kiosk-vr'; 
+const repo = 'LifeQuest'; 
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
