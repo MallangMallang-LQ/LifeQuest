@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import clsx from 'clsx';
@@ -135,9 +136,10 @@ export default function Checkout() {
           ※ 훈련용 모의결제입니다. 선택 후 <b>결제 중</b> 화면으로 이동하고, 몇 초 뒤 자동으로 완료됩니다.
         </div>
 
-        <div className="mt-6">
-          <a href="/kiosk" className="text-sm text-neutral-500 hover:underline">← 키오스크로 돌아가기</a>
-        </div>
+        <Link href="/" className="text-sm text-neutral-500 hover:underline">
+          ← 홈으로 돌아가기
+        </Link>
+
       </div>
     </main>
   );

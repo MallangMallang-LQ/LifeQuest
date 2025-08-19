@@ -1,5 +1,6 @@
 'use client';
 import { useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 
 const paymentLabels = {
   kakaopay: '카카오페이',
@@ -31,9 +32,9 @@ export default function PaySuccess() {
         <div className="text-xs text-neutral-500 mb-8">
           주문번호: {orderId} <br/> 결제키: {paymentKey}
         </div>
-        <a href="/kiosk" className="px-5 py-3 rounded-xl bg-neutral-900 text-white font-extrabold">
-          키오스크로 돌아가기
-        </a>
+        <Link href="/" className="text-sm text-neutral-500 hover:underline">
+          ← 홈으로 돌아가기
+        </Link>
       </div>
     </main>
   );
