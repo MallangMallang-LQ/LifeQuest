@@ -34,12 +34,18 @@ jobs:
         run: npm install --no-audit --no-fund
 
 
-      - name: Build & Export (static)
+      - name: Build 
         working-directory: kiosk-vr
         env:
           GITHUB_PAGES: true           # next.config에서 basePath 분기용
         run:
           npm run build
+
+      - name: Export
+        working-directory: kiosk-vr
+        env: 
+          GITHUB_PAGES: true
+        run:
           npm run export
 
       - name: Upload artifact
