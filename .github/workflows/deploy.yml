@@ -40,12 +40,6 @@ jobs:
           GITHUB_PAGES: true           # next.config에서 basePath 분기용
         run:
           npm run build
-
-      - name: Export
-        working-directory: kiosk-vr
-        env: 
-          GITHUB_PAGES: true
-        run:
           npm run export
 
       - name: Upload artifact
