@@ -31,12 +31,8 @@ jobs:
       # lockfile 있으면 ci, 없으면 install (웹 업로드 대비 안전장치)
       - name: Install deps
         working-directory: kiosk-vr
-        run: |
-          if [ -f package-lock.json ]; then
-            npm ci
-          else
-            npm install
-          fi
+        run: npm install --no-audit --no-fund
+
 
       - name: Build & Export (static)
         working-directory: kiosk-vr
