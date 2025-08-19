@@ -17,21 +17,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - name: Debug: list files
-        shell: bash
-        run: |
-          pwd
-          ls -la
-          ls -la kiosk-vr/app/checkout || true
-          ls -la kiosk-vr/app/pay/processing || true
-          ls -la kiosk-vr/app/pay/success || true
-          ls -la kiosk-vr/app/pay/fail || true
-
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
     steps:          
       - name: Checkout
         uses: actions/checkout@v4
